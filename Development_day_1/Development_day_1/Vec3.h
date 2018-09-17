@@ -35,26 +35,26 @@ public:
 	else return true;
 	} ;
 
-	float distance_to(vec3 vector_1, vec3 vector_2) {
+	float distance_to(vec3 vector_2) {
 		float distance;
-		distance = sqrt(((vector_1.x + vector_2.x)*(vector_1.x + vector_2.x)) + ((vector_1.y + vector_2.y)*(vector_1.y + vector_2.y)) + ((vector_1.z + vector_2.z)*(vector_1.z + vector_2.z)));
+		distance = sqrt(((x + vector_2.x)*(x + vector_2.x)) + ((y + vector_2.y)*(y + vector_2.y)) + ((z + vector_2.z)*(z + vector_2.z)));
 		return distance;
 	};
 
 	vec3 operator+(const vec3 &vec) {
-		return vec.x + x, vec.y + y, vec.z + z;
+		return (x + vec.x, y + vec.y, z + vec.z);
 	};
 	vec3 operator-(const vec3 &vec) {
-		return vec.x - x, vec.y - y, vec.z - z;
+		return x - vec.x, y - vec.y, z - vec.z;
 	};
 	vec3 operator+=(const vec3 &vec) {
-		return vec.x += x, vec.y += y, vec.z += z;
+		return x += vec.x, y += vec.y, z += vec.z;
 	};
 	vec3 operator-=(const vec3 &vec) {
-		return vec.x -= x, vec.y -= y, vec.z -= z;
+		return x -= vec.x, y -= vec.y, z -= vec.z;
 	};
 	vec3 operator=(const vec3 &vec) {
-		return vec.x = x, vec.y = y, vec.z = z;
+		return (x = vec.x, y = vec.y, z = vec.z);
 	}
 
 	bool operator==(const vec3 vec) {
