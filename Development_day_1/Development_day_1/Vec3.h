@@ -13,7 +13,9 @@ public:
 	vec3() : x(0), y(0), z(0) {};
 	vec3(T v) : x(v), y(v), z(v) {};
 	vec3(T X, T Y, T Z) : x(X), y(Y), z(Z) {};
+
 	//Operators + , -, +=, -=, =, ==
+
 	void normalize() {
 		float lenght;
 		lenght = sqrt((x * x) + (y * y) + (z * z));
@@ -39,24 +41,24 @@ public:
 		return distance;
 	};
 
-	vec3 operator+(const vec3 &vec_a, const vec3 &vec_b) {
-		return vec_a.x + vec_b.x, vec_a.y + vec_b.y, vec_a.z + vec_b.z;
+	vec3 operator+(const vec3 &vec) {
+		return vec.x + x, vec.y + y, vec.z + z;
 	};
-	vec3 operator-(const vec3 &vec_a, const vec3 &vec_b) {
-		return vec_a.x - vec_b.x, vec_a.y - vec_b.y, vec_a.z - vec_b.z;
+	vec3 operator-(const vec3 &vec) {
+		return vec.x - x, vec.y - y, vec.z - z;
 	};
-	vec3 operator+=(const vec3 &vec_a, T v) {
-		return vec_a.x + v, vec_a.y + v, vec_a.z + v;
+	vec3 operator+=(const vec3 &vec) {
+		return vec.x += x, vec.y += y, vec.z += z;
 	};
-	vec3 operator-=(const vec3 &vec_a, T v) {
-		return vec_a.x - v, vec_a.y - v, vec_a.z - v;
+	vec3 operator-=(const vec3 &vec) {
+		return vec.x -= x, vec.y -= y, vec.z -= z;
 	};
-	vec3 operator=(const vec3 &vec_a, const vec3 &vec_b) {
-		return vec_b.x = vec_a.x, vec_b.y = vec_a.y, vec_b.z = vec_a.z;
+	vec3 operator=(const vec3 &vec) {
+		return vec.x = x, vec.y = y, vec.z = z;
 	}
 
-	bool operator==(const vec3 vec_a, const vec3 vec_b) {
-		if (vec_b.x != vec_a.x || vec_b.y != vec_a.y || vec_b.z != vec_a.z) return false;
+	bool operator==(const vec3 vec) {
+		if (x != vec.x || y != vec.y || z != vec.z) return false;
 		else return true;
 	}
 };
