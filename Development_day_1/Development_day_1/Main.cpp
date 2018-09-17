@@ -19,6 +19,8 @@ int main() {
 	cout << vec2->x << " " << vec2->y << " " << vec2->z << endl;
 	cout << endl;
 
+	fvec3 *vec3 = new fvec3(8);
+
 	vec1->normalize();
 
 	cout << "Vector 1 normalized" << endl;
@@ -33,13 +35,30 @@ int main() {
 
 	cout << endl;
 
-	cout << "Vector  = 0 ?" << " " << vec1->is_zero() << " " << "Vector 2 = 0?" << " " << vec2->is_zero() << endl;
+	cout << "Vector1  = 0 ?" << " " << vec1->is_zero() << " " << "Vector 2 = 0?" << " " << vec2->is_zero() << endl;
 	cout << endl;
+
 	float dis;
 	dis = vec1->distance_to(*vec2);
 	cout << "Distance between 1 and 2 = "<< dis << endl;
+
+
+
+	*vec1 += *vec2;
+
+	*vec3 = *vec1 + *vec2;
+
+	cout << vec1->x << " " << vec1->y << " " << vec1->z << endl;
+	cout << vec2->x << " " << vec2->y << " " << vec2->z << endl;
+	cout << vec3->x << " " << vec3->y << " " << vec3->z << endl;
+	cout << endl;
+
+
+	cout << "Vector1  = Vector 2" << " " << (*vec1==*vec2) << " " << "Vector 2 = vector 3?" << " " << (*vec2==*vec3) << endl;
+
 	system("pause");
 
+	
 
 	return 0;
 

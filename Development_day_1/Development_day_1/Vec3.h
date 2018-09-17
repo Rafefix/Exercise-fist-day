@@ -42,7 +42,7 @@ public:
 	};
 
 	vec3 operator+(const vec3 &vec) {
-		return (x + vec.x, y + vec.y, z + vec.z);
+		return x + vec.x, y + vec.y, z + vec.z;
 	};
 	vec3 operator-(const vec3 &vec) {
 		return x - vec.x, y - vec.y, z - vec.z;
@@ -54,7 +54,7 @@ public:
 		return x -= vec.x, y -= vec.y, z -= vec.z;
 	};
 	vec3 operator=(const vec3 &vec) {
-		return (x = vec.x, y = vec.y, z = vec.z);
+		return x = vec.x, y = vec.y, z = vec.z;
 	}
 
 	bool operator==(const vec3 vec) {
