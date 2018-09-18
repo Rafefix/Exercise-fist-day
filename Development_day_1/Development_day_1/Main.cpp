@@ -48,6 +48,7 @@ int main() {
 
 	*vec3 = *vec1 + *vec2;
 
+
 	cout << vec1->x << " " << vec1->y << " " << vec1->z << endl;
 	cout << vec2->x << " " << vec2->y << " " << vec2->z << endl;
 	cout << vec3->x << " " << vec3->y << " " << vec3->z << endl;
