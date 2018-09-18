@@ -14,8 +14,8 @@ public:
 	vec3(T vec) : x(vec), y(vec), z(vec) {};
 	vec3(T X, T Y, T Z) : x(X), y(Y), z(Z) {};
 
-	//Operators + , -, +=, -=, =, ==
-
+	//Methods
+	
 	void normalize() {
 		float lenght;
 		lenght = sqrt((x * x) + (y * y) + (z * z));
@@ -41,6 +41,8 @@ public:
 		return distance;*/
 		return sqrt(((x + vec.x)*(x + vec.x)) + ((y + vec.y)*(y + vec.y)) + ((z + vec.z)*(z + vec.z)));
 	};
+
+	//Operators + , -, +=, -=, =, ==
 
 	vec3 operator+(const vec3 &vec) {
 		vec3 aux;
@@ -68,7 +70,7 @@ public:
 		return x = vec.x, y = vec.y, z = vec.z;
 	}
 
-	bool operator==(const vec3 vec) {
+	bool operator==(const vec3 vec) const{
 		/*if (x != vec.x || y != vec.y || z != vec.z) return false;
 		else return true;*/
 		return (x != vec.x || y != vec.y || z != vec.z);
