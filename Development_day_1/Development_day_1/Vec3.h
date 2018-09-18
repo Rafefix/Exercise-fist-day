@@ -45,29 +45,29 @@ public:
 	//Operators + , -, +=, -=, =, ==
 
 	vec3 operator+(const vec3 &vec) {
-		vec3 aux;
+		/*vec3 aux;
 		aux.x = x + vec.x;
 		aux.y = y + vec.y;
 		aux.z = z + vec.z;
-		return aux;
-		/*return x + vec.x, y + vec.y, z + vec.z;*/
+		return aux;*/
+		return vec3(x + vec.x, y + vec.y, z + vec.z);
 	};
 	vec3 operator-(const vec3 &vec) {
-		vec3 aux;
+		/*vec3 aux;
 		aux.x = x - vec.x;
 		aux.y = y - vec.y;
 		aux.z = z - vec.z;
-		return aux;
-		/*return x - vec.x, y - vec.y, z - vec.z;*/
+		return aux;*/
+		return vec3(x - vec.x, y - vec.y, z - vec.z);
 	};
 	vec3 operator+=(const vec3 &vec) {
-		return x += vec.x, y += vec.y, z += vec.z;
+		return vec3(x += vec.x, y += vec.y, z += vec.z);
 	};
 	vec3 operator-=(const vec3 &vec) {
-		return x -= vec.x, y -= vec.y, z -= vec.z;
+		return vec3(x -= vec.x, y -= vec.y, z -= vec.z);
 	};
 	vec3 operator=(const vec3 &vec) {
-		return x = vec.x, y = vec.y, z = vec.z;
+		return vec3(x = vec.x, y = vec.y, z = vec.z);
 	}
 
 	bool operator==(const vec3 vec) const{
